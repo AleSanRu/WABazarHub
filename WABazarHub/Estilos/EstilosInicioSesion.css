@@ -1,0 +1,125 @@
+﻿/* Estilos generales */
+body {
+    background: linear-gradient(to right, #8B0000, #DB7093);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #111111;
+}
+
+.containerP {
+    font-family: 'Georgia', serif;
+    background-color: #f0e2de;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+    text-align: center;
+}
+
+/* Estilos de las tarjetas */
+.card {
+    border: none;
+    border-radius: 10px;
+}
+
+.card-header {
+    background-color: #d6998a;
+    color: #111111;
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Estilos de los botones */
+.btn-primary {
+    background-color: #b55a4f;
+    border-color: #b55a4f;
+}
+
+    .btn-primary:hover {
+        background-color: #9a4741;
+        border-color: #9a4741;
+    }
+
+.btn-link {
+    color: #d6998a;
+}
+
+    .btn-link:hover {
+        color: #b55a4f;
+    }
+
+/* Animaciones */
+.fadeIn {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.slideRight {
+    animation: slideRight 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Media queries para responsividad */
+@media (max-width: 1200px) {
+    .containerP {
+        width: auto;
+        margin: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .containerP {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .containerP {
+        margin: 10px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        font-size: 14px;
+    }
+
+    .containerP {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    .card-header {
+        font-size: 16px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+}

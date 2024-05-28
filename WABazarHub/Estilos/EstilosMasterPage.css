@@ -1,0 +1,103 @@
+﻿html, body, form {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: #f4f4f4;
+    background-image: linear-gradient(to right top, #a18cd1 0%, #fbc2eb 100%);
+    color: #333;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.nav.flex-column {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    border: 2px solid #dee2e6;
+}
+
+h1, h2 {
+    color: #003973;
+    font-family: 'Cursive', 'Segoe UI', sans-serif;
+}
+
+h1 {
+    font-size: 2.8rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+h2 {
+    font-size: 2.2rem;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px dashed #dee2e6;
+}
+
+.navigation-menu a {
+    color: #0056b3;
+    padding: 12px 18px;
+    border-radius: 6px;
+
+    transition: all 0.5s ease;
+    border: 1px solid transparent;
+    font-style: italic;
+}
+
+    .navigation-menu a:hover,
+    .navigation-menu a:focus {
+        color: #fff;
+        background-color: #0056b3;
+        text-decoration: none;
+        transform: scale(1.05);
+        border-color: #0056b3;
+    }
+
+.navigation-menu li {
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+.btn-link {
+    color: #007bff;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-style: italic;
+}
+
+    .btn-link:hover {
+        color: #fff;
+        background-color: #0056b3;
+        border-color: #007bff;
+        transform: scale(1.1);
+    }
+
+.col, .col-12, .col-md-4, .col-md-8 {
+    padding: 20px;
+    background-image: linear-gradient(145deg, #6e45e2 0%, #88d3ce 100%);
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.3);
+    transition: transform 0.3s ease;
+}
+
+    .col:hover, .col-12:hover, .col-md-4:hover, .col-md-8:hover {
+        transform: scale(1.03);
+        border: 1px solid rgba(255,255,255,0.5);
+    }
+
+@media (max-width: 768px) {
+    .col, .col-12, .col-md-4, .col-md-8 {
+        margin: 10px 0;
+    }
+}

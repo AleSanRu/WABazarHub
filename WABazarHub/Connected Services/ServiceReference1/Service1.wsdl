@@ -1,0 +1,780 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:56426/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:56426/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:56426/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_InsertarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarUsuarioEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarUsuarioEstado" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarUsuarioEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarUsuarioEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarUsuarioFechaEdicion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarUsuarioFechaEdicion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarUsuarioFechaEdicion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarUsuarioFechaEdicionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerTodosUsuarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTodosUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerTodosUsuarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTodosUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertarTipoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarTipoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertarTipoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarTipoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarTipoUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarTipoUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarTipoUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarTipoUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarTipoUsuarioEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarTipoUsuarioEstado" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarTipoUsuarioEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarTipoUsuarioEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarTipoUsuarioFechaEdicion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarTipoUsuarioFechaEdicion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarTipoUsuarioFechaEdicion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarTipoUsuarioFechaEdicionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerTodosTiposUsuario_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTodosTiposUsuario" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerTodosTiposUsuario_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTodosTiposUsuarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertarProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarProducto" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertarProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarProducto_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarProducto" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarProducto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarProductoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarProductoEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarProductoEstado" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarProductoEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarProductoEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarProductoFechaEdicion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarProductoFechaEdicion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarProductoFechaEdicion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarProductoFechaEdicionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerTodosProductos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTodosProductos" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerTodosProductos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTodosProductosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertarPedido_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarPedido" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertarPedido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarPedidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarPedido_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPedido" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarPedido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPedidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarPedidoEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPedidoEstado" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarPedidoEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPedidoEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarPedidoFechaEdicion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPedidoFechaEdicion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarPedidoFechaEdicion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarPedidoFechaEdicionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerTodosPedidos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTodosPedidos" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerTodosPedidos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTodosPedidosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertarDetallePedido_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarDetallePedido" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertarDetallePedido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarDetallePedidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarDetallePedido_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarDetallePedido" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarDetallePedido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarDetallePedidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarDetallePedidoEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarDetallePedidoEstado" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarDetallePedidoEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarDetallePedidoEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarDetallePedidoFechaEdicion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarDetallePedidoFechaEdicion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarDetallePedidoFechaEdicion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarDetallePedidoFechaEdicionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerTodosDetallesPedidos_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTodosDetallesPedidos" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerTodosDetallesPedidos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTodosDetallesPedidosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertarDireccionEnvio_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarDireccionEnvio" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertarDireccionEnvio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarDireccionEnvioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarDireccionEnvio_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarDireccionEnvio" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarDireccionEnvio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarDireccionEnvioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarDireccionEnvioEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarDireccionEnvioEstado" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarDireccionEnvioEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarDireccionEnvioEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarDireccionEnvioFechaEdicion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarDireccionEnvioFechaEdicion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarDireccionEnvioFechaEdicion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarDireccionEnvioFechaEdicionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerTodasDireccionesEnvio_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTodasDireccionesEnvio" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerTodasDireccionesEnvio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTodasDireccionesEnvioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertarProveedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarProveedor" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertarProveedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarProveedor_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarProveedor" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarProveedor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarProveedorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarProveedorEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarProveedorEstado" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarProveedorEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarProveedorEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarProveedorFechaEdicion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarProveedorFechaEdicion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarProveedorFechaEdicion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarProveedorFechaEdicionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerTodosProveedores_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTodosProveedores" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerTodosProveedores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTodosProveedoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertarCategoria_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarCategoria" />
+  </wsdl:message>
+  <wsdl:message name="IService1_InsertarCategoria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarCategoria_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCategoria" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarCategoria_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCategoriaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarCategoriaEstado_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCategoriaEstado" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarCategoriaEstado_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCategoriaEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarCategoriaFechaEdicion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCategoriaFechaEdicion" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ActualizarCategoriaFechaEdicion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarCategoriaFechaEdicionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerTodasCategorias_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTodasCategorias" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ObtenerTodasCategorias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerTodasCategoriasResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="InsertarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertarUsuario" message="tns:IService1_InsertarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertarUsuarioResponse" message="tns:IService1_InsertarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarUsuario" message="tns:IService1_ActualizarUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarUsuarioResponse" message="tns:IService1_ActualizarUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarUsuarioEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarUsuarioEstado" message="tns:IService1_ActualizarUsuarioEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarUsuarioEstadoResponse" message="tns:IService1_ActualizarUsuarioEstado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarUsuarioFechaEdicion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarUsuarioFechaEdicion" message="tns:IService1_ActualizarUsuarioFechaEdicion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarUsuarioFechaEdicionResponse" message="tns:IService1_ActualizarUsuarioFechaEdicion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTodosUsuarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerTodosUsuarios" message="tns:IService1_ObtenerTodosUsuarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerTodosUsuariosResponse" message="tns:IService1_ObtenerTodosUsuarios_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarTipoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertarTipoUsuario" message="tns:IService1_InsertarTipoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertarTipoUsuarioResponse" message="tns:IService1_InsertarTipoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTipoUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarTipoUsuario" message="tns:IService1_ActualizarTipoUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarTipoUsuarioResponse" message="tns:IService1_ActualizarTipoUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTipoUsuarioEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarTipoUsuarioEstado" message="tns:IService1_ActualizarTipoUsuarioEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarTipoUsuarioEstadoResponse" message="tns:IService1_ActualizarTipoUsuarioEstado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTipoUsuarioFechaEdicion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarTipoUsuarioFechaEdicion" message="tns:IService1_ActualizarTipoUsuarioFechaEdicion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarTipoUsuarioFechaEdicionResponse" message="tns:IService1_ActualizarTipoUsuarioFechaEdicion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTodosTiposUsuario">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerTodosTiposUsuario" message="tns:IService1_ObtenerTodosTiposUsuario_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerTodosTiposUsuarioResponse" message="tns:IService1_ObtenerTodosTiposUsuario_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarProducto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertarProducto" message="tns:IService1_InsertarProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertarProductoResponse" message="tns:IService1_InsertarProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProducto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarProducto" message="tns:IService1_ActualizarProducto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarProductoResponse" message="tns:IService1_ActualizarProducto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProductoEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarProductoEstado" message="tns:IService1_ActualizarProductoEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarProductoEstadoResponse" message="tns:IService1_ActualizarProductoEstado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProductoFechaEdicion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarProductoFechaEdicion" message="tns:IService1_ActualizarProductoFechaEdicion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarProductoFechaEdicionResponse" message="tns:IService1_ActualizarProductoFechaEdicion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTodosProductos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerTodosProductos" message="tns:IService1_ObtenerTodosProductos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerTodosProductosResponse" message="tns:IService1_ObtenerTodosProductos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPedido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertarPedido" message="tns:IService1_InsertarPedido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertarPedidoResponse" message="tns:IService1_InsertarPedido_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPedido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarPedido" message="tns:IService1_ActualizarPedido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarPedidoResponse" message="tns:IService1_ActualizarPedido_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPedidoEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarPedidoEstado" message="tns:IService1_ActualizarPedidoEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarPedidoEstadoResponse" message="tns:IService1_ActualizarPedidoEstado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPedidoFechaEdicion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarPedidoFechaEdicion" message="tns:IService1_ActualizarPedidoFechaEdicion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarPedidoFechaEdicionResponse" message="tns:IService1_ActualizarPedidoFechaEdicion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTodosPedidos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerTodosPedidos" message="tns:IService1_ObtenerTodosPedidos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerTodosPedidosResponse" message="tns:IService1_ObtenerTodosPedidos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarDetallePedido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertarDetallePedido" message="tns:IService1_InsertarDetallePedido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertarDetallePedidoResponse" message="tns:IService1_InsertarDetallePedido_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDetallePedido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarDetallePedido" message="tns:IService1_ActualizarDetallePedido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarDetallePedidoResponse" message="tns:IService1_ActualizarDetallePedido_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDetallePedidoEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarDetallePedidoEstado" message="tns:IService1_ActualizarDetallePedidoEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarDetallePedidoEstadoResponse" message="tns:IService1_ActualizarDetallePedidoEstado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDetallePedidoFechaEdicion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarDetallePedidoFechaEdicion" message="tns:IService1_ActualizarDetallePedidoFechaEdicion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarDetallePedidoFechaEdicionResponse" message="tns:IService1_ActualizarDetallePedidoFechaEdicion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTodosDetallesPedidos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerTodosDetallesPedidos" message="tns:IService1_ObtenerTodosDetallesPedidos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerTodosDetallesPedidosResponse" message="tns:IService1_ObtenerTodosDetallesPedidos_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarDireccionEnvio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertarDireccionEnvio" message="tns:IService1_InsertarDireccionEnvio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertarDireccionEnvioResponse" message="tns:IService1_InsertarDireccionEnvio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDireccionEnvio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarDireccionEnvio" message="tns:IService1_ActualizarDireccionEnvio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarDireccionEnvioResponse" message="tns:IService1_ActualizarDireccionEnvio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDireccionEnvioEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarDireccionEnvioEstado" message="tns:IService1_ActualizarDireccionEnvioEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarDireccionEnvioEstadoResponse" message="tns:IService1_ActualizarDireccionEnvioEstado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDireccionEnvioFechaEdicion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarDireccionEnvioFechaEdicion" message="tns:IService1_ActualizarDireccionEnvioFechaEdicion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarDireccionEnvioFechaEdicionResponse" message="tns:IService1_ActualizarDireccionEnvioFechaEdicion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTodasDireccionesEnvio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerTodasDireccionesEnvio" message="tns:IService1_ObtenerTodasDireccionesEnvio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerTodasDireccionesEnvioResponse" message="tns:IService1_ObtenerTodasDireccionesEnvio_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarProveedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertarProveedor" message="tns:IService1_InsertarProveedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertarProveedorResponse" message="tns:IService1_InsertarProveedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProveedor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarProveedor" message="tns:IService1_ActualizarProveedor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarProveedorResponse" message="tns:IService1_ActualizarProveedor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProveedorEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarProveedorEstado" message="tns:IService1_ActualizarProveedorEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarProveedorEstadoResponse" message="tns:IService1_ActualizarProveedorEstado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProveedorFechaEdicion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarProveedorFechaEdicion" message="tns:IService1_ActualizarProveedorFechaEdicion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarProveedorFechaEdicionResponse" message="tns:IService1_ActualizarProveedorFechaEdicion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTodosProveedores">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerTodosProveedores" message="tns:IService1_ObtenerTodosProveedores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerTodosProveedoresResponse" message="tns:IService1_ObtenerTodosProveedores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertarCategoria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/InsertarCategoria" message="tns:IService1_InsertarCategoria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/InsertarCategoriaResponse" message="tns:IService1_InsertarCategoria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCategoria">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarCategoria" message="tns:IService1_ActualizarCategoria_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarCategoriaResponse" message="tns:IService1_ActualizarCategoria_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCategoriaEstado">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarCategoriaEstado" message="tns:IService1_ActualizarCategoriaEstado_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarCategoriaEstadoResponse" message="tns:IService1_ActualizarCategoriaEstado_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCategoriaFechaEdicion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ActualizarCategoriaFechaEdicion" message="tns:IService1_ActualizarCategoriaFechaEdicion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ActualizarCategoriaFechaEdicionResponse" message="tns:IService1_ActualizarCategoriaFechaEdicion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTodasCategorias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ObtenerTodasCategorias" message="tns:IService1_ObtenerTodasCategorias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ObtenerTodasCategoriasResponse" message="tns:IService1_ObtenerTodasCategorias_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="InsertarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarUsuarioEstado">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarUsuarioEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarUsuarioFechaEdicion">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarUsuarioFechaEdicion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTodosUsuarios">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtenerTodosUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarTipoUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertarTipoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTipoUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarTipoUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTipoUsuarioEstado">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarTipoUsuarioEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarTipoUsuarioFechaEdicion">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarTipoUsuarioFechaEdicion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTodosTiposUsuario">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtenerTodosTiposUsuario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarProducto">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProducto">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarProducto" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProductoEstado">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarProductoEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProductoFechaEdicion">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarProductoFechaEdicion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTodosProductos">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtenerTodosProductos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarPedido">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertarPedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPedido">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarPedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPedidoEstado">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarPedidoEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarPedidoFechaEdicion">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarPedidoFechaEdicion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTodosPedidos">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtenerTodosPedidos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarDetallePedido">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertarDetallePedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDetallePedido">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarDetallePedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDetallePedidoEstado">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarDetallePedidoEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDetallePedidoFechaEdicion">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarDetallePedidoFechaEdicion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTodosDetallesPedidos">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtenerTodosDetallesPedidos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarDireccionEnvio">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertarDireccionEnvio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDireccionEnvio">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarDireccionEnvio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDireccionEnvioEstado">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarDireccionEnvioEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarDireccionEnvioFechaEdicion">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarDireccionEnvioFechaEdicion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTodasDireccionesEnvio">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtenerTodasDireccionesEnvio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarProveedor">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertarProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProveedor">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarProveedor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProveedorEstado">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarProveedorEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarProveedorFechaEdicion">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarProveedorFechaEdicion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTodosProveedores">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtenerTodosProveedores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertarCategoria">
+      <soap:operation soapAction="http://tempuri.org/IService1/InsertarCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCategoria">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarCategoria" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCategoriaEstado">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarCategoriaEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarCategoriaFechaEdicion">
+      <soap:operation soapAction="http://tempuri.org/IService1/ActualizarCategoriaFechaEdicion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerTodasCategorias">
+      <soap:operation soapAction="http://tempuri.org/IService1/ObtenerTodasCategorias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:56426/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

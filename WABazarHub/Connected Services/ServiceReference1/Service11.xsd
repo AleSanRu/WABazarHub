@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:56426/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" />
+  <xs:element name="InsertarUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="usuario" nillable="true" type="q1:EUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="usuario" nillable="true" type="q2:EUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarUsuarioEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuarioID" type="xs:int" />
+        <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarUsuarioEstadoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarUsuarioFechaEdicion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="usuarioID" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaEdicion" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarUsuarioFechaEdicionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTodosUsuarios">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTodosUsuariosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="ObtenerTodosUsuariosResult" nillable="true" type="q3:ArrayOfEUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarTipoUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="tipoUsuario" nillable="true" type="q4:ETipoUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarTipoUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarTipoUsuario">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="tipoUsuario" nillable="true" type="q5:ETipoUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarTipoUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarTipoUsuarioEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipoUsuarioID" type="xs:int" />
+        <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarTipoUsuarioEstadoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarTipoUsuarioFechaEdicion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="tipoUsuarioID" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaEdicion" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarTipoUsuarioFechaEdicionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTodosTiposUsuario">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTodosTiposUsuarioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="ObtenerTodosTiposUsuarioResult" nillable="true" type="q6:ArrayOfETipoUsuario" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarProducto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="producto" nillable="true" type="q7:EProductos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarProductoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarProducto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="producto" nillable="true" type="q8:EProductos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarProductoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarProductoEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productoID" type="xs:int" />
+        <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarProductoEstadoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarProductoFechaEdicion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="productoID" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaEdicion" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarProductoFechaEdicionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTodosProductos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTodosProductosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="ObtenerTodosProductosResult" nillable="true" type="q9:ArrayOfEProductos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarPedido">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="pedido" nillable="true" type="q10:EPedidos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarPedidoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarPedido">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="pedido" nillable="true" type="q11:EPedidos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarPedidoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarPedidoEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pedidoID" type="xs:int" />
+        <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarPedidoEstadoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarPedidoFechaEdicion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pedidoID" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaEdicion" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarPedidoFechaEdicionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTodosPedidos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTodosPedidosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="ObtenerTodosPedidosResult" nillable="true" type="q12:ArrayOfEPedidos" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarDetallePedido">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="detallePedido" nillable="true" type="q13:EDetallesPedido" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarDetallePedidoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarDetallePedido">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="detallePedido" nillable="true" type="q14:EDetallesPedido" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarDetallePedidoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarDetallePedidoEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="detalleID" type="xs:int" />
+        <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarDetallePedidoEstadoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarDetallePedidoFechaEdicion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="detalleID" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaEdicion" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarDetallePedidoFechaEdicionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTodosDetallesPedidos">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTodosDetallesPedidosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="ObtenerTodosDetallesPedidosResult" nillable="true" type="q15:ArrayOfEDetallesPedido" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarDireccionEnvio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="direccionEnvio" nillable="true" type="q16:EDireccionesEnvio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarDireccionEnvioResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarDireccionEnvio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="direccionEnvio" nillable="true" type="q17:EDireccionesEnvio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarDireccionEnvioResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarDireccionEnvioEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="direccionID" type="xs:int" />
+        <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarDireccionEnvioEstadoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarDireccionEnvioFechaEdicion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="direccionID" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaEdicion" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarDireccionEnvioFechaEdicionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTodasDireccionesEnvio">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTodasDireccionesEnvioResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="ObtenerTodasDireccionesEnvioResult" nillable="true" type="q18:ArrayOfEDireccionesEnvio" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarProveedor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="proveedor" nillable="true" type="q19:EProveedores" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarProveedorResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarProveedor">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="proveedor" nillable="true" type="q20:EProveedores" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarProveedorResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarProveedorEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="proveedorID" type="xs:int" />
+        <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarProveedorEstadoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarProveedorFechaEdicion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="proveedorID" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaEdicion" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarProveedorFechaEdicionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTodosProveedores">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTodosProveedoresResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="ObtenerTodosProveedoresResult" nillable="true" type="q21:ArrayOfEProveedores" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarCategoria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="categoria" nillable="true" type="q22:ECategorias" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertarCategoriaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarCategoria">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="categoria" nillable="true" type="q23:ECategorias" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarCategoriaResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarCategoriaEstado">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="categoriaID" type="xs:int" />
+        <xs:element minOccurs="0" name="estado" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarCategoriaEstadoResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarCategoriaFechaEdicion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="categoriaID" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaEdicion" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarCategoriaFechaEdicionResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTodasCategorias">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerTodasCategoriasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/SWLNBazarHub.Entidades" minOccurs="0" name="ObtenerTodasCategoriasResult" nillable="true" type="q24:ArrayOfECategorias" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

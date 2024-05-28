@@ -1,0 +1,141 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PaginaMaestraInicio.master.cs" Inherits="WABazarHub.MasterPage.PaginaMaestraInicio" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="../Estilos/EstilosMasterPage.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+    <style>
+        .shopping-cart {
+            position: fixed;
+            bottom: 0;
+            left: 0; /* Cambiado a la izquierda */
+            background-color: white;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000; /* Asegura que esté encima de otros elementos */
+            max-width: 300px; /* Puedes ajustar el ancho según necesites */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+            .shopping-cart h5 {
+                font-size: 1.5em;
+                margin-bottom: 15px;
+                color: #007BFF;
+            }
+
+            .shopping-cart .cart-item {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                margin-bottom: 10px;
+                border-bottom: 1px solid #eee;
+                padding-bottom: 10px;
+            }
+
+                .shopping-cart .cart-item span {
+                    font-size: 1em;
+                }
+
+            .shopping-cart .cart-total {
+                font-size: 1.2em;
+                margin: 15px 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .shopping-cart .btn {
+                margin-top: 10px;
+                width: 100%;
+            }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-8 col-md-8">
+                    <a href="PaginaInicio.aspx">
+                        <h1>Bazar Hub Online</h1>
+                    </a>
+                </div>
+                <div class="col-4 col-md-4 text-md-right text-center">
+                    <div class="user-info">
+                        <i id="IconoUsuario" class="fas fa-user"></i>
+                        <asp:Label ID="lblNombre" runat="server" CssClass="font-weight-bold"></asp:Label>
+                        <asp:Label ID="lblCorreo" runat="server"></asp:Label>
+                        <asp:Label ID="lblEstado" runat="server"></asp:Label>
+                        <asp:LinkButton ID="btnInicioSesion" runat="server" CssClass="btn btn-link" OnClick="btnInicioSesion_Click">Inicio de sesión</asp:LinkButton>
+                        <asp:LinkButton ID="btnCerrarSesion" runat="server" CssClass="btn btn-link" OnClick="btnCerrarSesion_Click">Cerrar sesión</asp:LinkButton>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="nav flex-column">
+                        <asp:Menu ID="NavigationMenu" runat="server" CssClass="navigation-menu" StaticDisplayLevels="1" Orientation="Vertical">
+                            <Items>
+                                <asp:MenuItem Text="Administracion" Value="ComprasOnline">
+                                    <asp:MenuItem Text="Registro De Productos" Value="Registro De Productos" NavigateUrl="../FormulariosWeb/AdministracionProductos.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Administracion De Pedidos" Value="Administracion De Pedidos" NavigateUrl="../FormulariosWeb/AdministracionPedidos.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Administracion De Proveedores" Value="Administracion De Proveedores" NavigateUrl="../FormulariosWeb/AdministracionProveedores.aspx"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Hacer Pedido" Value="HacerPedido">
+                                    <asp:MenuItem Text="Personalizado" Value="Personalizado" NavigateUrl="~/PedidoPersonalizado.aspx"></asp:MenuItem>
+                                    <asp:MenuItem Text="Pedido Rápido" Value="PedidoRapido" NavigateUrl="~/PedidoRapido.aspx"></asp:MenuItem>
+                                </asp:MenuItem>
+                                <asp:MenuItem Text="Sobre Nosotros" Value="SobreNosotros" NavigateUrl="~/SobreNosotros.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Productos" Value="Producto" NavigateUrl="../FormulariosWeb/MostrarProductos.aspx"></asp:MenuItem>
+                                <asp:MenuItem Text="Contactanos" Value="Contactanos" NavigateUrl="../FormulariosWeb/Contactanos.aspx"></asp:MenuItem>
+                            </Items>
+                        </asp:Menu>
+                    </div>
+                </div>
+                <div class="col-12 col-md-8">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                </div>
+
+            </div>
+        </div>
+        <div class="shopping-cart" runat="server" id="shoppingCartContainer">
+            <h5>Carrito de Compras</h5>
+            <asp:Repeater ID="rptCartItems" runat="server">
+                <ItemTemplate>
+                    <div class="cart-item">
+                        <span><%# Eval("Nombre") %></span>
+                        <span><%# Eval("Precio", "{0:C}") %> x 1</span>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
+            <div class="cart-total">
+                <span>Total:</span>
+                <asp:Label ID="lblCartTotal" runat="server" Text="0.00"></asp:Label>
+            </div>
+            <asp:Button ID="btnConfirmarPedido" runat="server" Text="Confirmar Pedido" CssClass="btn btn-primary btn-block" OnClick="btnConfirmarPedido_Click" />
+        </div>
+
+    </form>
+</body>
+    <script>
+    // Función para almacenar la posición de la página
+    function guardarPosicion() {
+        var scrollPosition = window.scrollY || window.pageYOffset;
+        sessionStorage.setItem('scrollPosition', scrollPosition);
+    }
+
+    // Llamar a la función para guardar la posición antes de recargar la página
+    window.onbeforeunload = guardarPosicion;
+    </script>
+
+</html>
